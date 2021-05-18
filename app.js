@@ -19,16 +19,10 @@ You can use the following cases as guides:
 
  */
 let convertFahrToCelsius = (temp) => {
-    try {
-        let num = isNaN(temp);
-        if (num) {
-            return ((temp - 32) * (5 / 9)).toFixed(4)
-        }
-    } catch {
-        
-    }
+  return `${((temp - 32) * (5 / 9)).toFixed(4)} deg C`;
 };
 
+console.log(convertFahrToCelsius(5));
 
 /* 
 2. Write a function named "checkYuGiOh" that takes a number, n, as an argument, creates an array of numbers from 1 to n and replaces multiples of 2, 3, and 5 with "yu", "gi" and "oh", then returns the resulting array.
