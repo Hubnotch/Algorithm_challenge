@@ -19,10 +19,15 @@ You can use the following cases as guides:
 
  */
 let convertFahrToCelsius = (temp) => {
-  return `${((temp - 32) * (5 / 9)).toFixed(4)} deg C`;
+  let convertTem = Number(temp);
+  if (convertTem) {
+    return `${((temp - 32) * (5 / 9)).toFixed(4)} deg C`;
+  } else {
+    return `${temp} is not a valid number but a/an ${typeof temp}`;
+  }
 };
 
-console.log(convertFahrToCelsius(5));
+console.log(convertFahrToCelsius(56));
 
 /* 
 2. Write a function named "checkYuGiOh" that takes a number, n, as an argument, creates an array of numbers from 1 to n and replaces multiples of 2, 3, and 5 with "yu", "gi" and "oh", then returns the resulting array.
